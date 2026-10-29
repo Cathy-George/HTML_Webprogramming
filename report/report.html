@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Web Programming Report - Cathy George</title>
+<style>
+  @page { size: A4; margin: 20mm 20mm 18mm; }
+  body { font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt; line-height: 1.45; color: #222; margin: 0; }
+  .titlepage { height: 250mm; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; page-break-after: always; }
+  .titlepage .rule { width: 60%; border-top: 1px solid #00695c; margin: 8mm 0; }
+  .titlepage .kicker { font-variant: small-caps; letter-spacing: 3px; color: #00695c; font-size: 13pt; }
+  .titlepage h1 { font-weight: normal; font-size: 27pt; margin: 4mm 0; color: #00332c; }
+  .titlepage .sub { font-style: italic; color: #555; font-size: 12pt; }
+  .titlepage dl { display: grid; grid-template-columns: auto auto; gap: 3mm 8mm; font-size: 12pt; margin-top: 18mm; text-align: left; }
+  .titlepage dt { font-variant: small-caps; color: #00695c; letter-spacing: 1px; }
+  .titlepage dd { margin: 0; }
+  h2 { font-weight: normal; font-variant: small-caps; letter-spacing: 1px; font-size: 14pt; color: #00695c; margin: 14px 0 4px; page-break-after: avoid; }
+  h2::after { content: ""; display: block; width: 40px; border-bottom: 2px solid #00897b; margin-top: 2px; }
+  p { margin: 4px 0; text-align: justify; }
+  code { font-family: "Courier New", monospace; font-size: 9.5pt; color: #00695c; }
+  pre { border-left: 3px solid #00897b; background: #f3faf8; padding: 5px 10px; font-family: "Courier New", monospace; font-size: 8.5pt; line-height: 1.3; margin: 6px 0; white-space: pre-wrap; page-break-inside: avoid; }
+  pre .tg { color: #00695c; font-weight: bold; }
+  pre .av { color: #8e24aa; }
+  figure { margin: 6px 0; page-break-inside: avoid; }
+  figure img { width: 100%; border: 1px solid #b2dfdb; }
+  figure.right { float: right; width: 46%; margin: 2px 0 6px 14px; }
+  figure.center { width: 72%; margin: 8px auto; }
+  figcaption { font-size: 8.8pt; font-style: italic; color: #555; text-align: center; }
+  .clear { clear: both; }
+  dl.terms { margin: 4px 0; }
+  dl.terms dt { font-family: "Courier New", monospace; color: #00695c; font-weight: bold; float: left; width: 28mm; clear: left; }
+  dl.terms dd { margin: 0 0 3px 30mm; }
+  ol.refs { font-size: 9.8pt; }
+</style>
+</head>
+<body>
+
+<div class="titlepage">
+  <div class="kicker">Web Programming Assignment</div>
+  <div class="rule"></div>
+  <h1>Creating a Multi-Section<br>Department Website using HTML</h1>
+  <div class="sub">Case study: Department of Information Technology</div>
+  <div class="rule"></div>
+  <dl>
+    <dt>Name</dt><dd>Cathy George</dd>
+    <dt>Roll Number</dt><dd>62</dd>
+    <dt>Class</dt><dd>S7 CSA</dd>
+    <dt>Subject</dt><dd>Web Programming</dd>
+    <dt>Date</dt><dd>29-10-2026</dd>
+  </dl>
+</div>
+
+<h2>Introduction</h2>
+<p>For this assignment I designed a one-page website for the <b>Department of Information Technology</b>. The page is placed inside a centred white box on a light green background. A logo and title sit at the top, followed by rounded navigation buttons and six sections: About Us, Academic Programmes, Faculty, Facilities, Student Enquiry and Contact Details. Notepad++ was used to write the code and Google Chrome to test it.</p>
+<figure class="center">
+  <img src="screenshots/home.png" alt="IT website home">
+  <figcaption>Fig. 1 &ndash; The top of the IT department page as seen in the browser</figcaption>
+</figure>
+
+<h2>1. Structure of an HTML Document</h2>
+<p>An HTML file is a set of nested elements. The outer structure written at the start of every page is:</p>
+<script type="text/plain" class="code">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Information Technology Department</title>
+  <style> ... </style>
+</head>
+<body>
+  <div class="container"> ... page content ... </div>
+</body>
+</html>
+</script>
+<dl class="terms">
+  <dt>&lt;!DOCTYPE&gt;</dt><dd>The first line of the file. It informs the browser that this is an HTML5 document so that it is displayed correctly.</dd>
+  <dt>&lt;html&gt;</dt><dd>Starts and ends the HTML document. All other tags are its children.</dd>
+  <dt>&lt;head&gt;</dt><dd>A container for page settings: character encoding, the title and the internal <code>&lt;style&gt;</code> block.</dd>
+  <dt>&lt;title&gt;</dt><dd>Defines the title in the browser&rsquo;s title bar / tab. Only one title is allowed.</dd>
+  <dt>&lt;body&gt;</dt><dd>Contains the content that appears in the browser window.</dd>
+</dl>
+
+<h2>2. Headings, Paragraphs and Formatting</h2>
+<p>There are six levels of headings. I used <code>&lt;h1&gt;</code> once for the department name and <code>&lt;h2&gt;</code> for every section title, which keeps the outline of the page logical. Paragraphs are enclosed in <code>&lt;p&gt;</code>. The formatting tags used are <code>&lt;strong&gt;</code> for important words, <code>&lt;em&gt;</code> for emphasis, <code>&lt;b&gt;</code> for programme names and <code>&lt;small&gt;</code> for the last-date note inside the notice box.</p>
+<script type="text/plain" class="code">
+<h2>About Us</h2>
+<p>The <strong>Department of Information Technology</strong> was established in the year 2004 ...
+   such as <em>cloud computing</em> and <em>data analytics</em>.</p>
+<aside><b>Notice:</b> Admissions for 2026-27 are now open. <small>(Last date: 30 November 2026)</small></aside>
+</script>
+
+<h2>3. Lists</h2>
+<figure class="right">
+  <img src="screenshots/programmes.png" alt="List of subjects">
+  <figcaption>Fig. 2 &ndash; Subjects displayed as a two-column bulleted list</figcaption>
+</figure>
+<p>HTML supports ordered lists (<code>&lt;ol&gt;</code>, numbered) and unordered lists (<code>&lt;ul&gt;</code>, bulleted). The subjects offered by the department are written as an <b>unordered list</b> of six items. The class <code>subjects</code> is used in CSS to change the bullet to a circle and to split the list into two columns.</p>
+<script type="text/plain" class="code">
+<ul class="subjects">
+  <li>Programming in C</li>
+  <li>Object Oriented Programming using Java</li>
+  <li>Software Engineering</li>
+  <li>Cloud Computing</li>
+  <li>Data Analytics</li>
+  <li>Information Security</li>
+</ul>
+</script>
+<div class="clear"></div>
+
+<h2>4. Hyperlinks</h2>
+<p>A hyperlink is created with the anchor element <code>&lt;a&gt;</code>; its <code>href</code> attribute holds the address. The navigation buttons are internal links to section ids. External links point to our college, SWAYAM and MDN Web Docs; <code>target="_blank"</code> opens them in a new tab. The e-mail address uses <code>mailto:</code>.</p>
+<script type="text/plain" class="code">
+<nav>
+  <a href="#about">About Us</a> <a href="#programmes">Programmes</a> <a href="#faculty">Faculty</a> ...
+</nav>
+<a href="https://www.example.edu" target="_blank">Our College</a>,
+<a href="https://swayam.gov.in" target="_blank">SWAYAM</a>,
+<a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a>
+E-mail: <a href="mailto:it@example.edu">it@example.edu</a>
+</script>
+
+<h2>5. Images</h2>
+<figure class="right" style="width:40%">
+  <img src="screenshots/facilities.png" alt="Facilities section with lab image">
+  <figcaption>Fig. 3 &ndash; Lab image inside &lt;figure&gt; with a caption</figcaption>
+</figure>
+<p>The <code>&lt;img&gt;</code> tag embeds an image. It is an empty element with two essential attributes: <code>src</code> (location of the image file) and <code>alt</code> (text description for accessibility). The size is set with <code>width</code> and <code>height</code>. Two images are used: the department logo in the header, and an illustration of the lab placed inside <code>&lt;figure&gt;</code> with a <code>&lt;figcaption&gt;</code>.</p>
+<script type="text/plain" class="code">
+<img src="images/it-logo.svg" alt="IT Department Logo" width="90" height="90">
+
+<figure>
+  <img src="images/lab.svg" alt="Drawing of the IT computer lab" width="320">
+  <figcaption>Fig: Programming Lab of the IT Department</figcaption>
+</figure>
+</script>
+<div class="clear"></div>
+
+<h2>6. Tables</h2>
+<p>Tables arrange data in rows and columns. The faculty table uses <code>&lt;table&gt;</code>, a <code>&lt;caption&gt;</code> for its title, <code>&lt;tr&gt;</code> for each row, <code>&lt;th&gt;</code> for the column headings and <code>&lt;td&gt;</code> for the data. It lists five faculty members.</p>
+<script type="text/plain" class="code">
+<table>
+  <caption>Faculty of the IT Department</caption>
+  <tr><th>Name</th><th>Designation</th><th>Area of Specialization</th></tr>
+  <tr><td>Dr. Priya Raman</td><td>Professor &amp; HOD</td><td>Data Mining</td></tr>
+  <tr><td>Dr. Sajan Kurian</td><td>Associate Professor</td><td>Cloud Computing</td></tr>
+  ... three more rows ...
+</table>
+</script>
+<figure class="center" style="width:62%">
+  <img src="screenshots/faculty.png" alt="Faculty table">
+  <figcaption>Fig. 4 &ndash; Faculty table</figcaption>
+</figure>
+
+<h2>7. Forms</h2>
+<figure class="right" style="width:44%">
+  <img src="screenshots/enquiry.png" alt="Student enquiry form">
+  <figcaption>Fig. 5 &ndash; Student enquiry form</figcaption>
+</figure>
+<p>The student enquiry form is created with <code>&lt;form&gt;</code>. The fields are grouped with <code>&lt;fieldset&gt;</code> and titled with <code>&lt;legend&gt;</code>. Each <code>&lt;label&gt;</code> is connected to its input using <code>for</code> and <code>id</code>. Input types <code>text</code>, <code>email</code> and <code>tel</code> collect name, e-mail and phone number; a <code>&lt;select&gt;</code> drop-down gives the course preference and a <code>&lt;textarea&gt;</code> takes a message. <code>type="submit"</code> sends the data and <code>type="reset"</code> clears it.</p>
+<div class="clear"></div>
+<script type="text/plain" class="code">
+<form action="#" method="get">
+  <fieldset>
+    <legend>Enquiry Details</legend>
+    <label for="sname">Name</label>
+    <input type="text" id="sname" name="sname" required>
+    <label for="smail">Email</label>
+    <input type="email" id="smail" name="smail" required>
+    <label for="sphone">Phone Number</label> <input type="tel" id="sphone" name="sphone" maxlength="10">
+    <label for="pref">Course Preference</label>
+    <select id="pref" name="pref">
+      <option value="btech-it">B.Tech IT</option>
+      <option value="mca">MCA</option>
+    </select>
+    <label for="msg">Message</label>
+    <textarea id="msg" name="msg" rows="3"></textarea>
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+  </fieldset>
+</form>
+</script>
+
+<h2>8. Semantic HTML Elements</h2>
+<p>Semantic elements have names that describe their role, which makes the page easier to understand for developers, search engines and assistive technologies. The elements used in this website are:</p>
+<dl class="terms">
+  <dt>&lt;header&gt;</dt><dd>Top part of the page with the logo, title and motto.</dd>
+  <dt>&lt;nav&gt;</dt><dd>Holds the six navigation buttons.</dd>
+  <dt>&lt;main&gt;</dt><dd>Encloses the central content of the page; used only once.</dd>
+  <dt>&lt;section&gt;</dt><dd>Divides the content into About, Programmes, Faculty, Facilities, Enquiry and Contact.</dd>
+  <dt>&lt;aside&gt;</dt><dd>Side information that is related to the content &ndash; the admission notice.</dd>
+  <dt>&lt;figure&gt;</dt><dd>Self-contained image together with its <code>&lt;figcaption&gt;</code>.</dd>
+  <dt>&lt;footer&gt;</dt><dd>Bottom of the page with the copyright line.</dd>
+</dl>
+
+<h2>Conclusion</h2>
+<p>This assignment showed that a neat and useful department website can be made with plain HTML and a few lines of CSS. Using semantic elements and proper labels made the code organised and accessible. The complete code has been uploaded to GitHub.</p>
+
+<h2>References</h2>
+<ol class="refs">
+  <li>Mozilla Developer Network, <i>HTML basics</i>. https://developer.mozilla.org/en-US/docs/Learn/HTML</li>
+  <li>W3Schools, <i>HTML Forms</i> and <i>HTML Tables</i>. https://www.w3schools.com/html/</li>
+  <li>tutorialspoint, <i>HTML Tutorial</i>. https://www.tutorialspoint.com/html/</li>
+  <li>WHATWG, <i>HTML Living Standard</i>. https://html.spec.whatwg.org/</li>
+</ol>
+
+<script>
+document.querySelectorAll('script.code').forEach(function (s) {
+  var lines = s.textContent.replace(/^\n/, '').replace(/\s+$/, '').split('\n');
+  var ind = Math.min.apply(null, lines.filter(function (l) { return l.trim(); }).map(function (l) { return l.match(/^ */)[0].length; }));
+  var t = lines.map(function (l) { return l.slice(ind); }).join('\n')
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"([^"]*)"/g, '<span class="av">"$1"</span>')
+    .replace(/(&lt;\/?)([a-zA-Z0-9!]+)/g, '$1<span class="tg">$2</span>');
+  var pre = document.createElement('pre');
+  pre.innerHTML = t;
+  s.parentNode.replaceChild(pre, s);
+});
+</script>
+</body>
+</html>

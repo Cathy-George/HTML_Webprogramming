@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Information Technology Department</title>
+<style>
+  body {
+    font-family: "Trebuchet MS", sans-serif;
+    background: #e8f5f2;
+    margin: 0;
+  }
+  .container {
+    width: 850px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 0 30px 20px;
+  }
+  header { text-align: center; padding-top: 20px; }
+  header h1 { color: #00695c; margin: 8px 0 2px; }
+  header p { color: #555; margin: 0 0 10px; }
+  nav { text-align: center; padding: 10px 0; border-top: 1px solid #b2dfdb; border-bottom: 1px solid #b2dfdb; }
+  nav a {
+    display: inline-block;
+    padding: 5px 14px;
+    margin: 2px;
+    background: #00897b;
+    color: #fff;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  h2 { color: #00695c; }
+  aside {
+    background: #fff3cd;
+    border: 1px solid #f0c36d;
+    padding: 8px 15px;
+    margin: 15px 0;
+  }
+  figure { text-align: center; margin: 10px 0; }
+  figcaption { font-size: 13px; color: #666; }
+  ul.subjects { list-style-type: circle; columns: 2; }
+  table { width: 100%; border: 2px solid #00695c; border-collapse: collapse; }
+  th { background: #b2dfdb; }
+  th, td { padding: 7px; border-bottom: 1px solid #ccc; text-align: center; }
+  fieldset { border: 2px solid #00897b; border-radius: 6px; }
+  legend { font-weight: bold; color: #00695c; }
+  .row { margin: 8px 0; }
+  .row label { display: block; font-size: 14px; }
+  .row input, .row select, .row textarea { width: 60%; padding: 5px; }
+  input[type="submit"], input[type="reset"] { padding: 6px 18px; margin-right: 8px; }
+  footer { text-align: center; font-size: 13px; color: #555; border-top: 1px solid #ccc; padding-top: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <img src="images/it-logo.svg" alt="IT Department Logo" width="90" height="90">
+    <h1>Department of Information Technology</h1>
+    <p>Learn &bull; Innovate &bull; Lead</p>
+  </header>
+
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#faculty">Faculty</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#enquiry">Enquiry</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>The <strong>Department of Information Technology</strong> was established in the year 2004.
+        The department focuses on software development, networking and emerging technologies
+        such as <em>cloud computing</em> and <em>data analytics</em>.</p>
+      <aside>
+        <b>Notice:</b> Admissions for the academic year 2026&ndash;27 are now open. <small>(Last date: 30 November 2026)</small>
+      </aside>
+    </section>
+
+    <section id="programmes">
+      <h2>Academic Programmes</h2>
+      <p>Programmes offered: <b>B.Tech Information Technology</b> (Intake: 60) and <b>MCA</b> (Intake: 30).</p>
+      <p>Some of the subjects offered are:</p>
+      <ul class="subjects">
+        <li>Programming in C</li>
+        <li>Object Oriented Programming using Java</li>
+        <li>Software Engineering</li>
+        <li>Cloud Computing</li>
+        <li>Data Analytics</li>
+        <li>Information Security</li>
+      </ul>
+    </section>
+
+    <section id="faculty">
+      <h2>Faculty</h2>
+      <table>
+        <caption>Faculty of the IT Department</caption>
+        <tr><th>Name</th><th>Designation</th><th>Area of Specialization</th></tr>
+        <tr><td>Dr. Priya Raman</td><td>Professor &amp; HOD</td><td>Data Mining</td></tr>
+        <tr><td>Dr. Sajan Kurian</td><td>Associate Professor</td><td>Cloud Computing</td></tr>
+        <tr><td>Mrs. Reshma Babu</td><td>Assistant Professor</td><td>Software Engineering</td></tr>
+        <tr><td>Mr. Abdul Rasheed</td><td>Assistant Professor</td><td>Computer Networks</td></tr>
+        <tr><td>Ms. Anju Mohan</td><td>Assistant Professor</td><td>Human Computer Interaction</td></tr>
+      </table>
+    </section>
+
+    <section id="facilities">
+      <h2>Facilities</h2>
+      <figure>
+        <img src="images/lab.svg" alt="Drawing of the IT computer lab" width="320">
+        <figcaption>Fig: Programming Lab of the IT Department</figcaption>
+      </figure>
+      <p>The department has two programming labs, a networking lab, a project lab and a small library.
+        All labs have internet access and licensed software.</p>
+    </section>
+
+    <section id="enquiry">
+      <h2>Student Enquiry</h2>
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Enquiry Details</legend>
+          <div class="row"><label for="sname">Name</label><input type="text" id="sname" name="sname" required></div>
+          <div class="row"><label for="smail">Email</label><input type="email" id="smail" name="smail" required></div>
+          <div class="row"><label for="sphone">Phone Number</label><input type="tel" id="sphone" name="sphone" maxlength="10"></div>
+          <div class="row"><label for="pref">Course Preference</label>
+            <select id="pref" name="pref">
+              <option value="">-- Select --</option>
+              <option value="btech-it">B.Tech IT</option>
+              <option value="mca">MCA</option>
+            </select>
+          </div>
+          <div class="row"><label for="msg">Message</label><textarea id="msg" name="msg" rows="3"></textarea></div>
+          <input type="submit" value="Submit">
+          <input type="reset" value="Clear">
+        </fieldset>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Details</h2>
+      <p>Department of Information Technology<br>
+        Phone: +91 471 2556677<br>
+        E-mail: <a href="mailto:it@example.edu">it@example.edu</a></p>
+      <p>Related links:
+        <a href="https://www.example.edu" target="_blank">Our College</a>,
+        <a href="https://swayam.gov.in" target="_blank">SWAYAM</a>,
+        <a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Department of IT &copy; 2026 &mdash; Website created by Cathy George</p>
+  </footer>
+
+</div>
+</body>
+</html>
